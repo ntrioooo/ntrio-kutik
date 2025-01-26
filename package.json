@@ -10,6 +10,7 @@
     "preview": "husky install"
   },
   "dependencies": {
+    "@radix-ui/react-tooltip": "^1.1.7",
     "@shadcn/ui": "^0.0.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -35,16 +36,13 @@
   },
   "lint-staged": {
     "*.js": [
-      "eslint --fix",
-      "prettier --write"
+      "eslint --fix"
     ],
     "*.ts": [
-      "eslint --fix",
-      "prettier --write"
+      "eslint --fix"
     ],
     "*.tsx": [
-      "eslint --fix",
-      "prettier --write"
+      "eslint --fix"
     ]
   }
 }

@@ -5,8 +5,8 @@ const Navbar = () => {
     <nav>
       <div className="mx-auto px-2">
         <div className="relative flex items-center justify-between">
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="hidden sm:ml-6 sm:block">
+          <div className="flex flex-1 items-center">
+            <div className="sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 <a
                   href="#"
