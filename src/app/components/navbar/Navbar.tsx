@@ -1,12 +1,11 @@
-"use client";
+'use client';
 
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
-import { IoIosMoon } from "react-icons/io";
-import { FaMoon, FaSun } from "react-icons/fa";
+import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
+import { FaMoon, FaSun } from 'react-icons/fa';
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState<Boolean>(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
   const { theme, setTheme } = useTheme();
 
@@ -19,9 +18,9 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const [mounted, setMounted] = useState(false);
@@ -34,11 +33,13 @@ const Navbar = () => {
   // Pastikan komponen hanya dirender setelah mount (untuk menghindari masalah dengan SSR)
   if (!mounted) return null;
 
+  const currentTheme = theme ?? 'light';
+
   return (
     <nav className="sticky top-0 z-10 dark:bg-zinc-950 dark:text-white">
       <div
         className={`mx-auto px-2 bg-zinc-50 dark:bg-zinc-950 dark:text-white ${
-          isScrolled ? "opacity-50" : null
+          isScrolled ? 'opacity-50' : null
         }`}
       >
         <div className="relative flex items-center justify-between">
@@ -59,20 +60,25 @@ const Navbar = () => {
             <button
               type="button"
               className="relative rounded-full bg-gray-800 p-1 text-gray-400 text-white"
-              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+              onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
             >
-              <FaMoon
-                className={`transition-transform duration-300 ${
-                  theme === "dark" ? "-rotate-180 scale-0" : "rotate-0 scale-100"
-                }`}
-              />
-              <FaSun
-                className={`transition-transform duration-300 ${
-                  theme === "light"
-                    ? "-rotate-180 scale-0"
-                    : "rotate-0 scale-100"
-                }`}
-              />
+              {theme === 'light' ? (
+                <FaMoon
+                  className={`transition-transform duration-300 ${
+                    currentTheme === 'dark'
+                      ? '-rotate-180 scale-0'
+                      : 'rotate-0 scale-100'
+                  }`}
+                />
+              ) : (
+                <FaSun
+                  className={`transition-transform duration-300 ${
+                    currentTheme === 'light'
+                      ? '-rotate-180 scale-0'
+                      : 'rotate-0 scale-100'
+                  }`}
+                />
+              )}
             </button>
           </div>
         </div>
