@@ -1,33 +1,47 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
-} from "@/app/components/ui/card";
-import { Button } from "@/app/components/ui/button";
+} from '@/app/components/ui/card';
+import { Button } from '@/app/components/ui/button';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "../ui/tooltip";
-import Link from "next/link";
+} from '../ui/tooltip';
+import Link from 'next/link';
 
 // type CardProps = React.ComponentProps<typeof Card>;
 
+interface Tool {
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  name: string;
+}
+
+interface CardProps {
+  title: string;
+  description: string;
+  tools: Tool[]; // Updated from any to Tool[] for type safety
+  id: number;
+  linkDemo: string;
+  linkRepo: string;
+  className?: string;
+}
+
 const CardComponent = ({
-  className,
   title,
   description,
   tools,
   id,
   linkDemo,
   linkRepo,
-}: any) => {
+  className,
+}: CardProps) => {
   return (
-    <div className="mt-6 w-full sm:w-80 lg:w-96 h-80">
+    <div className={`mt-6 w-full sm:w-80 lg:w-96 h-80 ${className}`}>
       <Card className="h-full flex flex-col">
         <CardHeader>
           <h3 className="text-left font-medium">{title}</h3>
@@ -43,10 +57,10 @@ const CardComponent = ({
           <div className="flex-grow mt-auto">
             <div className="flex gap-2">
               <TooltipProvider key={id}>
-                {tools.map((tool: any, index: number) => (
-                  <Tooltip key={index}>
+                {tools.map((tool) => (
+                  <Tooltip key={tool.name}>
                     <TooltipTrigger>
-                      <tool.icon size={20} />{" "}
+                      <tool.icon width={20} height={25} />{' '}
                     </TooltipTrigger>
                     <TooltipContent className="text-center w-full">
                       <p>{tool.name}</p>

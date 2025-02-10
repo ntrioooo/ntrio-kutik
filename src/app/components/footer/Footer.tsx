@@ -1,5 +1,6 @@
-import { SiLinkedin } from "react-icons/si";
-import { SiGithub } from "react-icons/si";
+import Link from 'next/link';
+import { SiLinkedin } from 'react-icons/si';
+import { SiGithub } from 'react-icons/si';
 
 const Footer = () => {
   return (
@@ -50,14 +51,14 @@ const Footer = () => {
         <div className="sm:flex sm:items-center justify-between">
           <div className="flex mt-4 space-x-4">
             {connectFooter.map((connect) => (
-              <a
+              <Link
                 key={connect.name}
-                href="#"
+                href={connect.link}
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
               >
                 <connect.icon className="w-6 h-6" />
                 <span className="sr-only">{connect.name}</span>
-              </a>
+              </Link>
             ))}
           </div>
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
@@ -71,12 +72,14 @@ const Footer = () => {
 
 export const connectFooter = [
   {
-    name: "React",
+    name: 'LinkedIn',
     icon: SiLinkedin,
+    link: 'https://www.linkedin.com/in/trionugroho/',
   },
   {
-    name: "Next.js",
+    name: 'Github',
     icon: SiGithub,
+    link: 'https://github.com/ntrioooo',
   },
 ];
 
