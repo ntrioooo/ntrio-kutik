@@ -41,7 +41,7 @@ const CardComponent = ({
   className,
 }: CardProps) => {
   return (
-    <div className={`mt-6 w-full sm:w-80 lg:w-96 h-80 ${className}`}>
+    <div className={`mt-6 w-full lg:w-96 h-80 ${className}`}>
       <Card className="h-full flex flex-col">
         <CardHeader>
           <h3 className="text-left font-medium">{title}</h3>

@@ -43,7 +43,7 @@ export default function Home() {
           <h2 className="text-2xl font-semibold" id="projects">
             Projects
           </h2>
-          <div className="flex justify-between lg:gap-x-5">
+          <div className="flex flex-col lg:flex-row justify-between lg:gap-x-5">
             <Projects projects={projects} />
           </div>
         </main>
