@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-import VocasiaLogo from "../../images/experience/vocasia.png";
 
 export default function Experience() {
   const experienceData = [

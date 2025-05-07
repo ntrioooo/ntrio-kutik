@@ -1,10 +1,5 @@
-import Image from "next/image";
-import Navbar from "./components/navbar/Navbar";
 import Layout from "./layout/layout";
-import peaceImage from "../../public/images/memoji/peace-bg.png";
-import Techstack from "./components/techstack/Techstack";
 import Footer from "./components/footer/Footer";
-import Projects from "./components/projects/Projects";
 import {
   SiPython,
   SiFlask,
@@ -26,7 +21,7 @@ export default function Home() {
         }}
       >
         <p className="text-4xl sm:text-5xl md:text-6xl font-semibold text-center">
-          Hi! I'm Trio
+          Hi! I&apos;m Trio
           <br />
           Software Developer
           <br /> from Bekasi, Indonesia
