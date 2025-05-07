@@ -3,11 +3,6 @@ import localFont from "next/font/local";
 import "../styles/globals.css";
 import { ThemeProvider } from "next-themes";
 
-const interFont = localFont({
-  src: "../../public/fonts/inter-var-latin.woff2",
-  variable: "--font-inter",
-});
-
 const plusJakarta = localFont({
   src: [
     {
