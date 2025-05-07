@@ -8,6 +8,23 @@ const interFont = localFont({
   variable: "--font-inter",
 });
 
+const plusJakarta = localFont({
+  src: [
+    {
+      path: "../../public/fonts/PlusJakartaSans-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/PlusJakartaSans-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-jakarta",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "ntriodev",
   description: "ntriodev personal website",
@@ -20,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${interFont.variable} antialiased`}>
+      <body className={`${plusJakarta.variable} antialiased`}>
         <ThemeProvider attribute="class" enableSystem defaultTheme="system">
           {children}
         </ThemeProvider>
