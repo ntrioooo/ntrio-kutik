@@ -124,22 +124,18 @@ body {
   display: none; /* Chrome, Safari and Opera */
 }
 
-/* @keyframes gradientShift {
-  0% {
-    background: linear-gradient(135deg, #2c3e50, #4ca1af, #2980b9, #6dd5fa);
-  }
-  33% {
-    background: linear-gradient(135deg, #f6d365, #fda085, #ff9a9e, #fad0c4);
-  }
-  66% {
-    background: linear-gradient(135deg, #d4fc79, #96e6a1, #84fab0, #8fd3f4);
-  }
-  100% {
-    background: linear-gradient(135deg, #2c3e50, #4ca1af, #2980b9, #6dd5fa);
-  }
+.trusted-by-swiper {
+  transition-timing-function: linear !important;
 }
 
-.animate-gradient {
-  animation: gradientShift 12s ease infinite;
-  background-size: 400% 400%;
-} */
+.trusted-by-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.trusted-by-swiper .swiper-slide {
+  transition-timing-function: linear !important;
+}
+
+.swiper-slide {
+  border-radius: 18px;
+}
