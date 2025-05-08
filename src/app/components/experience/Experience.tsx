@@ -32,17 +32,17 @@ export default function Experience() {
         <div className="w-full md:w-2/3">
           <div className="space-y-6">
             <p className="text-gray-700">
-              I'm a Software Developer with around 2 years of experience,
+              I&apos;m a Software Developer with around 2 years of experience,
               focused on building high-performance websites using cutting-edge
               technologies. I enjoy transforming complex problems into scalable,
               efficient solutions that deliver a smooth and intuitive user
               experience.
             </p>
             <p className="text-gray-700">
-              I'm currently sharpening my skills in modern web
+              I&apos;m currently sharpening my skills in modern web
               technologies—diving deeper into the JavaScript ecosystem with
               React and Next.js, while also expanding my backend capabilities
-              with TypeScript and PHP Laravel. I'm passionate about writing
+              with TypeScript and PHP Laravel. I&apos;m passionate about writing
               clean and maintainable code.
             </p>
           </div>
@@ -76,7 +76,7 @@ export default function Experience() {
         </div>
         <div className="relative w-full md:w-1/3">
           <div className="h-64 overflow-y-scroll space-y-4 scrollbar-hide">
-            {experienceData.map((exp, idx) => (
+            {experienceData.map((exp) => (
               <div
                 key={exp.id}
                 className="flex items-center gap-4 p-4 border rounded-3xl shadow-sm hover:shadow-md transition snap-start"

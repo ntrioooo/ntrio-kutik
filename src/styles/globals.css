@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 body {
-  @apply text-base;
   font-family: var(--font-jakarta), sans-serif;
 }
 
