@@ -1,13 +1,5 @@
 import Layout from "./layout/layout";
 import Footer from "./components/footer/Footer";
-import {
-  SiPython,
-  SiFlask,
-  SiReact,
-  SiNodedotjs,
-  SiMongodb,
-  SiPostgresql,
-} from "react-icons/si";
 import Experience from "./components/experience/Experience";
 
 export default function Home() {
