@@ -15,11 +15,11 @@ import Image from "next/image";
 const Slider = () => {
 
   const slidesData = [
-    { src: Project1, alt: "project-1", text: "Personal" },
-    { src: Project2, alt: "project-2", text: "Personal" },
-    { src: Project3, alt: "project-3", text: "Personal" },
-    { src: Project4, alt: "project-4", text: "Vocasia" },
-    { src: Project5, alt: "project-5", text: "Personal" },
+    { src: Project1, alt: "Dashboard login page", text: "Personal" },
+    { src: Project2, alt: "Dashboard home page", text: "Personal" },
+    { src: Project3, alt: "Project showcase", text: "Personal" },
+    { src: Project4, alt: "Vocasia platform", text: "Vocasia" },
+    { src: Project5, alt: "Personal website exploration", text: "Personal" },
   ];
 
 
@@ -50,20 +50,22 @@ const Slider = () => {
       >
         {slidesData.map((slide, index) => (
           <SwiperSlide key={index}>
-            {/* Jadikan div ini sebagai kontainer relatif */}
-            <div className={`relative h-[150px] flex items-center justify-center text-white text-2xl font-bold rounded-md overflow-hidden`}>
+            <div className="group relative h-56 overflow-hidden rounded-2xl border border-slate-200/70 bg-white/70 shadow-sm backdrop-blur transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-slate-800 dark:bg-slate-900/70 dark:shadow-black/40">
               <Image
                 src={slide.src}
                 alt={slide.alt}
-                layout="fill"
-                objectFit="cover"
-                className="w-full h-full"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1280px) 280px, (min-width: 768px) 220px, 90vw"
+                priority={index === 0}
               />
-              {/* Div untuk teks, posisi absolut di kiri bawah */}
-              <div className="absolute bottom-0 left-0">
-                <p className="text-white text-sm md:text-base font-semibold bg-black bg-opacity-50 p-1 px-4 rounded">
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent transition-opacity duration-300 group-hover:from-slate-950/80" />
+              <div className="absolute inset-x-0 bottom-0 flex flex-col gap-2 p-4 text-white">
+                <span className="inline-flex w-max items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-xs font-medium uppercase tracking-wide">
+                  <span className="h-2 w-2 rounded-full bg-emerald-400" />
                   {slide.text}
-                </p>
+                </span>
+                <p className="text-sm font-semibold leading-snug">{slide.alt}</p>
               </div>
             </div>
           </SwiperSlide>
