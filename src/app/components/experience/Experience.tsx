@@ -57,7 +57,7 @@ export default function Experience() {
             LinkedIn
           </Link>
           <Link
-            href="mailto:trionugroho05@gmail.com"
+            href="mailto:trionugrohoid@gmail.com"
             className="inline-flex items-center justify-center rounded-full border border-emerald-300 bg-emerald-500/10 px-5 py-2 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-500/20 dark:border-emerald-500/40 dark:text-emerald-200"
           >
             Email Me
@@ -79,7 +79,7 @@ export default function Experience() {
               className="flex items-center gap-4 rounded-2xl border border-slate-200/80 bg-white/80 p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-200 hover:shadow-md dark:border-slate-800/60 dark:bg-slate-900/70 dark:hover:border-emerald-500/30"
             >
               <div
-                className={`flex h-14 w-14 items-center justify-center rounded-full border border-white/40 ${exp.logoBg}`}
+                className={`flex h-14 w-14 items-center justify-center rounded-2xl border border-white/40 ${exp.logoBg}`}
               >
                 {typeof exp.logo === "string" && exp.logo.startsWith("/") ? (
                   <Image
@@ -87,7 +87,7 @@ export default function Experience() {
                     alt={`${exp.company} logo`}
                     width={56}
                     height={56}
-                    className="h-12 w-12 rounded-full object-cover"
+                    className="h-12 w-12 object-contain"
                   />
                 ) : (
                   <span className="text-sm font-bold text-white">{exp.logo}</span>

@@ -72,7 +72,7 @@ export default function Home() {
                       See recent work
                     </a>
                     <a
-                      href="mailto:trionugroho05@gmail.com"
+                      href="mailto:trionugrohoid@gmail.com"
                       className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:text-slate-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-500 dark:border-slate-700 dark:bg-transparent dark:text-slate-200 dark:hover:border-slate-500 dark:hover:text-white"
                     >
                       Collaborate with me
@@ -177,7 +177,7 @@ export default function Home() {
                 </p>
                 <div className="mt-8 flex flex-wrap justify-center gap-4">
                   <a
-                    href="mailto:trionugroho05@gmail.com"
+                    href="mailto:trionugrohoid@gmail.com"
                     className="inline-flex items-center justify-center rounded-full bg-slate-900 px-7 py-3 text-sm font-semibold text-white transition hover:bg-slate-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200"
                   >
                     Start a project
