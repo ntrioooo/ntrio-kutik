@@ -57,7 +57,7 @@ export default function Experience() {
             LinkedIn
           </Link>
           <Link
-            href="mailto:trionugroho05@gmail.com"
+            href="mailto:trionugrohoid@gmail.com"
             className="inline-flex items-center justify-center rounded-full border border-emerald-300 bg-emerald-500/10 px-5 py-2 text-sm font-medium text-emerald-700 transition-colors hover:bg-emerald-500/20 dark:border-emerald-500/40 dark:text-emerald-200"
           >
             Email Me
